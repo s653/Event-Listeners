@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <h1>Complete Event Traker</h1>
+
+
+        <!-- Click Event  -->
+        <div class="click section" id="clickEvent">
+            <h2>Click Event</h2>
+            <button onclick="clickButton()">Click Me</button>
+            <p id="clickCount">Click Count : 0</p>
+        </div>
+
+
+        <!-- Mouse Event -->
+        <div id="mouseEvent" class="mouse section">
+            <h2>Mouse Event</h2>
+            <img src="image.png" onmousemove="imagePosition(event)" width="300" height="300">
+            <p>Mouse Position: (<span id="positionX">0</span>, <span id="positionY">0</span>)</p>
+        </div>
+
+
+        <!-- Keyboard Event -->
+        <div id="keyboardEvent" class="keyboard section">
+            <h2>Keyboard Event</h2>
+            <input type="text" id="keyboardinput" placeholder="Press and Key">
+            <p id="keyboardPosition">Last Key Pressed : None</p>
+        </div>
+
+
+        <!-- Focus and Blur Events  -->
+        <div id="focusBlur" class="focus section">
+            <h2>Focus and Blur Event</h2>
+            <input type="text" id="focusinput" placeholder="Focus and Blur" onfocus="focusEvent(event)"
+                onblur="blurEvent(event)">
+            <p id="focusPosition">Focus and Blur : Not Focus</p>
+        </div>
+
+
+        <!-- Window Resize Event  -->
+        <div id="windowEvent" class="window section">
+            <h2>Window Resize Event</h2>
+            <p>Window Width : <span id="width">0px</span>, Height : <span id="height">0px</span></p>
+        </div>
+
+
+        <!-- Touch Events -->
+
+
+        <div id="touchEvent" class="touch section">
+            <h2>Touch Event</h2>
+            <p id="position"> Touch Position : None</p>
+        </div>
+
+
+
+
+        <!-- Form Submit Event  -->
+        <div class="form section">
+            <h2>Form Submit Event</h2>
+            <form id="submitEvent" onsubmit="formSubmit(event)">
+                <input type="text" id="forminput" placeholder="Enter Text and Submit">
+                <button type="submit">Submit</button>
+                <button type="button" onclick="resetForm()">Reset</button>
+            </form>
+            <p id="formsubmit">Form Status : Not Submitted</p>
+        </div>
+
+
+        <!-- On mouseover or Out  -->
+
+
+        <div class="overout section">
+            <h2>Mouseover and Mouseout Event</h2>
+            <img src="flower-100263_640.jpg" onmouseover="src='flower2.webp'" onmouseout="src='flower3.jpg'" width="200"
+                height="200">
+        </div>
+
+
+
+
+        <!-- Drag and drop  -->
+        <div class="drag section">
+            <h2>Drag and Drop Event</h2>
+            <div id="dragdrop" draggable="true" ondragstart="dragStart()" ondragend="dragEnd()" style="color: black; font-weight: bold;">Drag Me!.</div>
+            <p id="dragMessage">Drag Status : Not Started</p>
+        </div>
+
+
+
+
+        <!-- Media Event  -->
+
+
+        <div class="media section">
+            <h2>Media Events</h2>
+           <video src="video.mp4" controls id="myvideo"></video>
+           <p id="mediaEvent">Media Status: Stopped</p>
+        </div>
+    </div>
+
+    <footer>
+        Created by @Ayesha Khan
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
